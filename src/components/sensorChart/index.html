@@ -1,0 +1,52 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <h5 class="mb-0">График показаний датчиков</h5>
+  </div>
+  <div class="card-body">
+    <form id="chartFilterForm" class="row gy-2 gx-3 align-items-end">
+      <div class="row mb-3">
+        <!-- Левая колонка: выбор датчиков -->
+        <div class="col-md-4">
+          <label for="deviceSelect" class="form-label">Выберите датчики</label>
+          <select id="deviceSelect" class="form-select h-100" multiple></select>
+        </div>
+
+        <!-- Правая часть: даты сверху, тип + кнопка снизу -->
+        <div class="col-md-8">
+          <!-- Первая строка: даты -->
+          <div class="row">
+            <div class="col-md-6">
+              <label for="startDate" class="form-label">Начальная дата</label>
+              <input type="date" class="form-control" id="startDate" required />
+            </div>
+            <div class="col-md-6">
+              <label for="endDate" class="form-label">Конечная дата</label>
+              <input type="date" class="form-control" id="endDate" required />
+            </div>
+          </div>
+
+          <!-- Вторая строка: тип + кнопка -->
+          <div class="row mt-3 align-items-end">
+            <div class="col-md-6">
+              <label for="chartType" class="form-label">Тип графика</label>
+              <select id="chartType" class="form-select">
+                <option value="line">Линейный</option>
+                <option value="bar">Столбчатый</option>
+                <option value="scatter">Точечный</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-primary w-100">
+                Показать
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="mt-4">
+      <canvas id="sensorChart" height="100"></canvas>
+    </div>
+  </div>
+</div>

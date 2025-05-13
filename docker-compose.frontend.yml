@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  polytech-smart-greenhouse-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/arm64
+    container_name: polytech-smart-greenhouse-frontend
+    ports:
+      - "80:80"
+    networks:
+      - polytech-smart-greenhouse-net
+
+networks:
+  backend-infrastructure_polytech-smart-greenhouse-net:
+    external: true

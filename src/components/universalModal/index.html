@@ -1,0 +1,59 @@
+<!-- <div id="universalModal" class="modal" style="display: none">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modalTitle">Заголовок</h2>
+
+    <div class="modal-body" id="modalBody">
+
+    </div>
+
+    <div class="button-row">
+      <button type="button" id="modalSubmit" class="btn-primary">
+        Применить
+      </button>
+      <button type="button" id="modalCancel" class="btn-secondary">
+        Отмена
+      </button>
+    </div>
+  </div>
+</div> -->
+
+<!-- Bootstrap modal -->
+<div
+  class="modal fade"
+  data-bs-theme="dark"
+  id="universalModal"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 60vw">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Заголовок</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Закрыть"
+        ></button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Сюда вставляется контент -->
+      </div>
+      <div class="modal-footer button-row">
+        <!-- Пользовательские кнопки добавляются динамически -->
+        <button type="button" id="modalSubmit" class="btn btn-primary">
+          Применить
+        </button>
+        <button
+          type="button"
+          id="modalCancel"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Отмена
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
